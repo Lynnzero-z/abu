@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+  --meadow: #edf4e3;
+  --sage: #a9c58f;
+  --ink: #35483a;
+  --mist: #ddeff0;
+  --butter: #f2dea0;
+  --blush: #e6c3bc;
+  --lilac: #cbc5df;
+  --paper: #faf8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(221, 239, 240, 0.72) 0%, rgba(237, 244, 227, 0.96) 34%, #edf4e3 100%);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(242, 222, 160, 0.9);
+}
+
+.hand-drawn {
+  border: 1px solid rgba(53, 72, 58, 0.18);
+  box-shadow: 4px 4px 0 rgba(169, 197, 143, 0.28);
+}
+
+.polaroid {
+  background: #fffdf6;
+  border: 1px solid rgba(53, 72, 58, 0.12);
+  box-shadow: 0 12px 28px rgba(53, 72, 58, 0.12);
+}
+
+.water-sheen {
+  background:
+    radial-gradient(circle at 28% 26%, rgba(255, 255, 255, 0.94) 0 8%, transparent 9%),
+    radial-gradient(circle at 68% 44%, rgba(255, 255, 255, 0.72) 0 5%, transparent 6%),
+    linear-gradient(135deg, rgba(221, 239, 240, 0.96), rgba(176, 214, 219, 0.78));
+}

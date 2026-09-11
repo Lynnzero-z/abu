@@ -8,7 +8,7 @@ export function MemberPortrait({
   member: Member;
   size?: "small" | "large";
 }) {
-  const dimensions = size === "large" ? "h-72" : "h-48";
+  const dimensions = size === "large" ? "h-[29rem]" : "h-64";
 
   if (!member.image) {
     return (
@@ -22,14 +22,14 @@ export function MemberPortrait({
   }
 
   return (
-    <div className={`polaroid rounded-md p-3 ${dimensions}`}>
-      <div className="relative h-full overflow-hidden rounded bg-mist">
+    <div className={`polaroid rounded-[1.1rem] p-2.5 ${dimensions}`}>
+      <div className="relative h-full overflow-hidden rounded-[.8rem] bg-mist">
         <Image
           src={member.image}
           alt={`${member.name} 的档案照片`}
           fill
           sizes={size === "large" ? "(min-width: 768px) 420px, 100vw" : "280px"}
-          className="object-cover"
+          className="object-cover transition duration-500 group-hover:scale-[1.02]"
         />
       </div>
     </div>
